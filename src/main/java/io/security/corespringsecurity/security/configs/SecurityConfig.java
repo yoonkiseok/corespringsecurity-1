@@ -93,6 +93,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         commonAccessDeniedHandler.setErrorPage("/denied");
         return commonAccessDeniedHandler;
     }
+    
+    @Bean
+    public AjaxLoginProcessingFilter ajaxLoginProcessingFilter() {
+        return new AjaxLoginProcessingFilter();
+    }
 
 
 }
